@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'CoursesController@index');
+
+Route::get('/{course_id}', 'LessonsController@index');
+
+Route::get('/{course_id}/{lesson_id}', 'LessonController@index');
